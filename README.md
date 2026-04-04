@@ -65,7 +65,7 @@ mix credo
 | `BelongsToMissingAllowNil` | Readability | Normal | Flags `belongs_to` without explicit `allow_nil?` |
 | `MissingCodeInterface` | Design | Low | Suggests adding a `code_interface` for resources with actions |
 | `ActionMissingDescription` | Readability | Low | Flags actions without a `description` |
-| `LargeResource` | Refactor | Low | Flags resource files exceeding 300 lines |
+| `LargeResource` | Refactor | Low | Flags resource files exceeding 400 lines |
 
 ## Configuration
 

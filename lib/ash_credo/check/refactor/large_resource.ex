@@ -3,7 +3,7 @@ defmodule AshCredo.Check.Refactor.LargeResource do
     base_priority: :low,
     category: :refactor,
     tags: [:ash],
-    param_defaults: [max_lines: 300],
+    param_defaults: [max_lines: 400],
     explanations: [
       check: """
       Large resource files are hard to navigate. Consider splitting
