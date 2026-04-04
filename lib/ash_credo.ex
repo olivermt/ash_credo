@@ -33,6 +33,7 @@ defmodule AshCredo do
             {AshCredo.Check.Warning.OverlyPermissivePolicy, []},
             {AshCredo.Check.Warning.SensitiveAttributeExposed, []},
             {AshCredo.Check.Warning.SensitiveFieldInAccept, []},
+            {AshCredo.Check.Warning.PinnedTimeInExpression, []},
             {AshCredo.Check.Warning.WildcardAcceptOnAction, []},
             # Design
             {AshCredo.Check.Design.MissingCodeInterface, []},
