@@ -27,6 +27,7 @@ defmodule AshCredo do
             # Warning
             {AshCredo.Check.Warning.AuthorizerWithoutPolicies, []},
             {AshCredo.Check.Warning.EmptyDomain, []},
+            {AshCredo.Check.Warning.MissingChangeWrapper, []},
             {AshCredo.Check.Warning.MissingDomain, []},
             {AshCredo.Check.Warning.MissingPrimaryKey, []},
             {AshCredo.Check.Warning.NoActions, []},

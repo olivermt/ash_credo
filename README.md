@@ -40,7 +40,7 @@ Register the plugin in your `.credo.exs` configuration:
 }
 ```
 
-That's it. All 17 checks are enabled by default. Run Credo as usual:
+That's it. All 18 checks are enabled by default. Run Credo as usual:
 
 ```bash
 mix credo
@@ -56,6 +56,7 @@ mix credo
 | `WildcardAcceptOnAction` | Warning | High | Detects `accept :*` on `create`/`update` actions (mass-assignment risk) |
 | `SensitiveFieldInAccept` | Warning | High | Flags privilege-escalation fields (`is_admin`, `permissions`, ...) in `accept` lists |
 | `PinnedTimeInExpression` | Warning | High | Flags `^Date.utc_today()` / `^DateTime.utc_now()` in Ash expressions (frozen at compile time) |
+| `MissingChangeWrapper` | Warning | High | Flags builtin change functions (`manage_relationship`, `set_attribute`, ...) used without `change` wrapper in actions |
 | `MissingPrimaryKey` | Warning | High | Ensures resources with data layers have a primary key |
 | `MissingDomain` | Warning | Normal | Ensures non-embedded resources set the `domain:` option |
 | `NoActions` | Warning | Normal | Flags resources with data layers but no actions defined |
