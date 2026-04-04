@@ -82,6 +82,9 @@ Checks are registered under the `extra` category. You can disable individual che
           # Disable a check
           {AshCredo.Check.Design.MissingCodeInterface, false},
 
+          # Set priority (can also be false to disable)
+          {AshCredo.Check.Warning.NoActions, [priority: :low]},
+
           # Customise parameters
           {AshCredo.Check.Refactor.LargeResource, [max_lines: 250]},
           {AshCredo.Check.Warning.SensitiveAttributeExposed, [
@@ -99,6 +102,17 @@ Checks are registered under the `extra` category. You can disable individual che
   ]
 }
 ```
+
+### Configurable parameters
+
+The following checks accept custom parameters:
+
+| Check | Parameter | Default | Description |
+|---|---|---|---|
+| `Refactor.LargeResource` | `max_lines` | `400` | Maximum line count before triggering |
+| `Warning.SensitiveAttributeExposed` | `sensitive_names` | `~w(password hashed_password password_hash token secret api_key private_key ssn)a` | Attribute names to flag when not marked `sensitive?: true` |
+| `Warning.SensitiveFieldInAccept` | `dangerous_fields` | `~w(is_admin admin permissions api_key secret_key)a` | Field names to flag when found in `accept` lists |
+| `Design.MissingIdentity` | `identity_candidates` | `~w(email username slug handle phone)a` | Attribute names to suggest adding identities for |
 
 ## Contributing
 
