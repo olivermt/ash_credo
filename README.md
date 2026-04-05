@@ -27,6 +27,18 @@ mix deps.get
 
 ## Setup
 
+### With Igniter
+
+If your project uses [Igniter](https://hexdocs.pm/igniter), you can set up AshCredo automatically:
+
+```bash
+mix ash_credo.install
+```
+
+This will create or update your `.credo.exs` to include the AshCredo plugin.
+
+### Manual
+
 Register the plugin in your `.credo.exs` configuration:
 
 ```elixir
